@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+Pokedux - Pokémon Redux App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pokedux es una aplicación web que consume la PokéAPI y permite visualizar una lista de Pokémon. Utiliza React, Redux y Ant Design para la interfaz de usuario.
 
-## Available Scripts
+🚀 Tecnologías utilizadas
 
-In the project directory, you can run:
+React: Biblioteca para construir la interfaz de usuario.
 
-### `npm start`
+Redux: Manejo global del estado.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ant Design: Estilizado y componentes UI.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Axios: Llamadas HTTP a la PokéAPI.
 
-### `npm test`
+📦 Instalación y configuración
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Clona el repositorio:
+```
+git clone https://github.com/tuusuario/pokedux.git
+cd pokedux
+```
 
-### `npm run build`
+Instala las dependencias:
+```
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Inicia la aplicación en modo desarrollo:
+```
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La app estará disponible en http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+📂 Estructura del proyecto
+```
+Pokedux/
+│── src/
+│   ├── api/
+│   │   ├── getApi.js         # Funciones para llamadas a la PokéAPI
+│   ├── components/
+│   │   ├── PokemonCard.js   # Tarjeta individual de cada Pokémon
+│   │   ├── PokemonList.js   # Lista de Pokémon
+│   │   ├── Searcher.js      # Buscador de Pokémon
+│   ├── actions/
+│   │   ├── actions.js       # Acciones de Redux
+│   ├── reducers/
+│   │   ├── rootReducer.js   # Reductor principal de Redux
+│   ├── styles/
+│   │   ├── App.css         # Estilos principales
+│   ├── App.js              # Componente principal
+│   ├── index.js            # Punto de entrada de la app
+│── public/
+│── package.json
+│── README.md
+```
+🔥 Características principales
 
-### `npm run eject`
+🌍 Obtiene y muestra una lista de los primeros 151 Pokémon.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🔍 Buscador interactivo de Pokémon.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+💾 Manejo de estado global con Redux.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🎨 Interfaz moderna con Ant Design.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+🛠 Posibles mejoras
 
-## Learn More
+Añadir paginación.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Mostrar más detalles de cada Pokémon.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Implementar una vista de favoritos.
 
-### Code Splitting
+👨‍💻 Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Desarrollado por Tu Nombre.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
