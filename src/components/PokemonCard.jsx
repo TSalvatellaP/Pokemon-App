@@ -4,15 +4,15 @@ import '../styles/PokemonList.css';
 import { StarOutlined } from '@ant-design/icons';
 
 
-function PokemonCard() {
+function PokemonCard({name}) {
   return (
    
 <Card 
 style={{width:250}}
-title='Ditto'
+title={name}
 cover={<img 
   src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/132.png" 
-  alt="Dito"/>}
+  alt={name}/>}
 extra={<StarOutlined/>}
 >
     <Meta description="fire, magic" />
