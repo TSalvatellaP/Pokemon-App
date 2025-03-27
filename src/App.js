@@ -7,7 +7,6 @@ import Searcher from './components/Searcher';
 import PokemonList from './components/PokemonList';
 import logo from '../src/assets/logo.svg';
 import getPokemon from '../src/api/getApi';
-import { connect } from 'react-redux';
 import { setPokemons} from './actions/actions';
 
 function App() {
