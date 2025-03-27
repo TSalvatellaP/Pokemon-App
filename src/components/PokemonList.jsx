@@ -8,6 +8,7 @@ const PokemonList = ({ pokemons}) => {
         key={index} 
         name={pokemon.name} 
         image={pokemon.sprites.front_default}
+        types={pokemon.types}
         />
       ))}
     </div>
