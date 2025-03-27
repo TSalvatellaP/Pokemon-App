@@ -6,8 +6,9 @@ import './styles/App.css';
 import Searcher from './components/Searcher';
 import PokemonList from './components/PokemonList';
 import logo from '../src/assets/logo.svg';
-import { getPokemon, getPokemonDetails } from "../src/api/getApi";
-import { setPokemons} from './actions/actions';
+import { getPokemon } from "../src/api/getApi";
+import { getPokemonWithDetails } from './actions/actions';
+
 
 function App() {
 const pokemons = useSelector(state => state.pokemons);
@@ -16,14 +17,11 @@ const dispatch = useDispatch();
   useEffect(() => {
     const fetchPokemons = async () => {
       const data = await getPokemon();
-      const pokemonsDetailed = await Promise.all(data.map(pokemon =>
-        getPokemonDetails(pokemon)
-      ));
-      dispatch(setPokemons(pokemonsDetailed));
+      dispatch(getPokemonWithDetails(data));
     };
     
     fetchPokemons();
-  }, [dispatch]);
+  }, []);
 
   return (
     <div className="App">
