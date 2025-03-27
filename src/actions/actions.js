@@ -1,8 +1,14 @@
+import { type } from "@testing-library/user-event/dist/type";
 import { getPokemonDetails } from "../api/getApi";
-import { SET_POKEMONS } from "./types";
+import { SET_LOADING, SET_POKEMONS } from "./types";
 
 export const setPokemons = (payload)=> ({
     type: SET_POKEMONS,
+    payload,
+});
+
+export const setLoading = (payload) => ({
+    type: SET_LOADING,
     payload,
 });
 
