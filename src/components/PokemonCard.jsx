@@ -1,7 +1,8 @@
 import {Card} from 'antd';
 import Meta from 'antd/es/card/Meta';
 import '../styles/PokemonList.css';
-import { StarOutlined } from '@ant-design/icons';
+import StarButton from './StarButton';
+
 
 
 function PokemonCard({name, image, types}) {
@@ -12,7 +13,7 @@ return (
 style={{width:250}}
 title={name}
 cover={<img src={image} alt={name}/>} 
-extra={<StarOutlined/>}
+extra={<StarButton isFavorite />}
 >
     <Meta description={typesString}/>
 
